@@ -2,12 +2,12 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require('cors')
 const Cards = require("./dbCards");
+const dotenv = require('dotenv')
 
 //app config
 const app = express();
 const PORT = process.env.PORT || 5000;
-const mongoDB =
-  "mongodb+srv://gagu:gagu123456@cluster0.irjem.mongodb.net/tinderDB?retryWrites=true&w=majority";
+const mongoDB = process.env.mongoDB;
 
 //MiddleWares
 app.use(express.json())
